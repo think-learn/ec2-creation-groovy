@@ -20,7 +20,7 @@ pipeline {
                     sh '''
                     aws ec2 run-instances \
                         --image-id $AMI_ID \
-                        --count 1 \
+                        --count 2 \
                         --instance-type $INSTANCE_TYPE \
                         --key-name $KEY_NAME \
                         --security-group-ids $SECURITY_GROUP \
