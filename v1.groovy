@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_DEFAULT_REGION = 'ap-south-1'   // change if needed
-        AMI_ID = 'ami-05d2d839d4f73aafb-'    // Amazon Linux (example)
+        AWS_DEFAULT_REGION = 'ap-south-1'
+        AMI_ID = 'ami-05d2d839d4f73aafb'   // ✅ fixed
         INSTANCE_TYPE = 't2.micro'
         KEY_NAME = 'new-aws-key'
         SECURITY_GROUP = 'sg-03600a51d96a85b44'
@@ -25,7 +25,9 @@ pipeline {
                         --key-name $KEY_NAME \
                         --security-group-ids $SECURITY_GROUP \
                         --subnet-id $SUBNET_ID \
-                        --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Jenkins-EC2}]'
+                        --associate-public-ip-address \
+                        --query 'Instances[0].InstanceId' \
+                        --output text
                     '''
                 }
             }
