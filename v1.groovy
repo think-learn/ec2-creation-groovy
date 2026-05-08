@@ -3,11 +3,11 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'ap-south-1'
-        AMI_ID = 'ami-05d2d839d4f73aafb'   // ✅ fixed
+        AMI_ID = 'ami-07a00cf47dbbc844c'   // ✅ fixed
         INSTANCE_TYPE = 't2.micro'
         KEY_NAME = 'new-aws-key'
-        SECURITY_GROUP = 'sg-03600a51d96a85b44'
-        SUBNET_ID = 'subnet-069f9b5757ce0ba4d'
+        SECURITY_GROUP = 'sg-03ca2d62d33cd42a2'
+        SUBNET_ID = 'subnet-01da04c48d3714008'
     }
 
     stages {
