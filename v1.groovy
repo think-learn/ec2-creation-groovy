@@ -4,7 +4,7 @@ pipeline {
     environment {
         AWS_DEFAULT_REGION = 'ap-south-1'
         AMI_ID = 'ami-07a00cf47dbbc844c'   // ✅ fixed
-        INSTANCE_TYPE = 't2.micro'
+        INSTANCE_TYPE = 't3.micro'
         KEY_NAME = 'new-aws-key'
         SECURITY_GROUP = 'sg-03ca2d62d33cd42a2'
         SUBNET_ID = 'subnet-01da04c48d3714008'
