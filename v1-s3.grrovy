@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'ap-south-1'
-        BUCKET_NAME = 'my-jenkins-bucket-bulu-2026'  // must be globally unique
+        BUCKET_NAME = 'my-jenkins-bucket-bulu-20026'  // must be globally unique
     }
 
     stages {
